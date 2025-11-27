@@ -1,0 +1,40 @@
+<div class="profile-container">
+    <div class="profile-header">
+        <div class="avatar-section">
+            <div class="avatar-circle">
+                <span>👤</span>
+            </div>
+        </div>
+        <div class="vendor-info-header">
+            <h2>{{ vendorData.name }}</h2>
+            <div class="vendor-id">Vendor ID: {{ vendorData.id }}</div>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-item">
+            <span class="info-label">Street</span>
+            <div class="info-value">{{ vendorData.street }}</div>
+        </div>
+        <div class="info-item">
+            <span class="info-label">City</span>
+            <div class="info-value">{{ vendorData.city }}</div>
+        </div>
+        <div class="info-item">
+            <span class="info-label">Country</span>
+            <div class="info-value">{{ vendorData.country }}</div>
+        </div>
+        <div class="info-item">
+            <span class="info-label">Postal Code</span>
+            <div class="info-value">{{ vendorData.postalCode }}</div>
+        </div>
+        <div class="info-item">
+            <span class="info-label">Phone Number</span>
+            <div class="info-value">{{ vendorData.phone }}</div>
+        </div>
+        <div class="info-item">
+            <span class="info-label">Email ID</span>
+            <div class="info-value">{{ vendorData.email }}</div>
+        </div>
+    </div>
+</div>

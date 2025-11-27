@@ -1,0 +1,37 @@
+<div class="memo-container">
+    <div class="page-header">
+        <a routerLink="/financials" class="back-btn">
+            <span class="back-icon">←</span> Back
+        </a>
+        <h1 class="page-title">Credit / Debit Memo</h1>
+    </div>
+
+    <div class="table-container">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Document No</th>
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Currency</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let memo of memos">
+                    <td>{{ memo.documentNo }}</td>
+                    <td>{{ memo.date }}</td>
+                    <td>
+                        <span [ngClass]="{'type-credit': memo.type === 'Credit', 'type-debit': memo.type === 'Debit'}">
+                            {{ memo.type }}
+                        </span>
+                    </td>
+                    <td>{{ memo.amount }}</td>
+                    <td>{{ memo.currency }}</td>
+                    <td>{{ memo.description }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

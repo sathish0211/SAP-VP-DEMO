@@ -1,0 +1,37 @@
+<div class="gr-container">
+    <div class="page-header">
+        <a routerLink="/dashboard" class="back-btn">
+            <span class="back-icon">←</span> Back
+        </a>
+        <h1 class="page-title">Goods Receipt</h1>
+    </div>
+
+    <div class="table-container">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>GR Number</th>
+                    <th>GR Date</th>
+                    <th>Material Number</th>
+                    <th>Qty Received</th>
+                    <th>Unit</th>
+                    <th>Storage Location</th>
+                    <th>Document Year</th>
+                    <th>Posting Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let gr of goodsReceipts">
+                    <td>{{ gr.grNumber }}</td>
+                    <td>{{ gr.grDate }}</td>
+                    <td>{{ gr.materialNumber }}</td>
+                    <td>{{ gr.quantityReceived }}</td>
+                    <td>{{ gr.unit }}</td>
+                    <td>{{ gr.storageLocation }}</td>
+                    <td>{{ gr.documentYear }}</td>
+                    <td>{{ gr.postingDate }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
