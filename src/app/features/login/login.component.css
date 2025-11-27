@@ -86,10 +86,27 @@
 .right-side {
     width: 40%;
     background-color: #f4f7f6;
+    /* Subtle dot pattern */
+    background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
+    background-size: 20px 20px;
     display: flex;
+    flex-direction: column;
+    /* Changed to column for footer */
     justify-content: center;
     align-items: center;
     position: relative;
+}
+
+/* Decorative corner element */
+.right-side::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, transparent 50%, rgba(75, 121, 161, 0.1) 50%);
+    z-index: 0;
 }
 
 /* Login Card */
@@ -102,6 +119,10 @@
     max-width: 400px;
     animation: slideInRight 1s ease-out;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+    /* Ensure above background elements */
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    /* Subtle border */
 }
 
 .login-card:hover {
@@ -204,6 +225,28 @@
     /* Placeholder space */
 }
 
+/* Footer */
+.login-footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #888;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.footer-link {
+    color: #4b79a1;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: #283e51;
+    text-decoration: underline;
+}
+
 /* Animations */
 @keyframes float {
     0% {
@@ -240,6 +283,16 @@
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }
 
